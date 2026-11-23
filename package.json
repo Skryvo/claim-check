@@ -53,7 +53,7 @@
     "build": "tsc -p tsconfig.build.json",
     "build:action": "esbuild src/action/main.ts --bundle --platform=node --target=node24 --format=esm --legal-comments=none --outfile=action/index.js",
     "typecheck": "tsc -p tsconfig.json",
-    "test": "npm run build && node --test test/*.test.mjs",
+    "test": "npm run build && node --test test/action.test.mjs test/check.test.mjs test/cli.test.mjs test/extract.test.mjs test/fetch.test.mjs test/judge.test.mjs test/mcp.test.mjs test/sarif.test.mjs test/search.test.mjs test/text.test.mjs",
     "eval": "npm run build && node scripts/eval.mjs",
     "prepublishOnly": "npm run typecheck && npm test"
   },

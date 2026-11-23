@@ -124,3 +124,10 @@ test("a model endpoint that refuses ends with exit 3 and its message", async () 
   assert.equal(r.code, 3);
   assert.match(r.stderr, /The model endpoint answered 401: .*bad key/);
 });
+
+test("npm test names every test file, since Windows shells do not expand globs", async () => {
+  const { readdir } = await import("node:fs/promises");
+  const pkg = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
+  const files = (await readdir(path.join(root, "test"))).filter((f) => f.endsWith(".test.mjs"));
+  for (const file of files) assert.ok(pkg.scripts.test.includes(`test/${file}`), `add test/${file} to the test script`);
+});

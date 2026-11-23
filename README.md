@@ -17,7 +17,7 @@ export CLAIM_CHECK_API_KEY=...                       # your key for that endpoin
 export CLAIM_CHECK_MODEL_OPTIONS='{"reasoning":{"enabled":false}}'
 
 curl -O https://raw.githubusercontent.com/Skryvo/claim-check/main/examples/sample.md
-npx claim-check sample.md
+npx @skryvo/claim-check sample.md
 ```
 
 [`examples/sample.md`](examples/sample.md) has five claims, one with a wrong year, citing public-domain United States
@@ -56,13 +56,13 @@ It exited with code 1, because a claim was contradicted.
 ### Command line
 
 ```bash
-npx claim-check article.md                 # one file
-npx claim-check "docs/**/*.md"             # a glob (quote it)
-npx claim-check https://example.com/post   # a public page; its links are its citations
-cat draft.md | npx claim-check             # stdin (or "-")
-npx claim-check article.md --json          # every field, for scripts
-npx claim-check "docs/**/*.md" --sarif > claims.sarif   # for code scanning
-npx claim-check article.md --search brave  # also search the web for claims the text does not source
+npx @skryvo/claim-check article.md                 # one file
+npx @skryvo/claim-check "docs/**/*.md"             # a glob (quote it)
+npx @skryvo/claim-check https://example.com/post   # a public page; its links are its citations
+cat draft.md | npx @skryvo/claim-check             # stdin (or "-")
+npx @skryvo/claim-check article.md --json          # every field, for scripts
+npx @skryvo/claim-check "docs/**/*.md" --sarif > claims.sarif   # for code scanning
+npx @skryvo/claim-check article.md --search brave  # also search the web for claims the text does not source
 ```
 
 | Exit code | Meaning |
@@ -91,7 +91,7 @@ Each answers with the readable report and the same report as structured content.
   "mcpServers": {
     "claim-check": {
       "command": "npx",
-      "args": ["-y", "claim-check", "mcp"],
+      "args": ["-y", "@skryvo/claim-check", "mcp"],
       "env": {
         "CLAIM_CHECK_BASE_URL": "https://openrouter.ai/api/v1",
         "CLAIM_CHECK_MODEL": "deepseek/deepseek-v4.1-flash-1017",
@@ -210,7 +210,7 @@ network. The model endpoint is the one exception, since you choose it and it may
 ## As a library
 
 ```js
-import { createChecker, modelFrom, searchFrom } from "claim-check";
+import { createChecker, modelFrom, searchFrom } from "@skryvo/claim-check";
 
 const checker = createChecker({ model: modelFrom({}), search: searchFrom({}) }); // reads the variables above
 const report = await checker.checkText(markdown, { input: "post.md" });

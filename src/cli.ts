@@ -60,7 +60,7 @@ It reads the same environment as the command line: CLAIM_CHECK_BASE_URL, CLAIM_C
 CLAIM_CHECK_API_KEY, CLAIM_CHECK_MODEL_OPTIONS, CLAIM_CHECK_SEARCH and the search key.
 
 A client configuration:
-  {"mcpServers": {"claim-check": {"command": "npx", "args": ["-y", "claim-check", "mcp"],
+  {"mcpServers": {"claim-check": {"command": "npx", "args": ["-y", "@skryvo/claim-check", "mcp"],
     "env": {"CLAIM_CHECK_BASE_URL": "...", "CLAIM_CHECK_MODEL": "...", "CLAIM_CHECK_API_KEY": "..."}}}}`;
 
 class UsageError extends Error {}

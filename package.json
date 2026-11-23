@@ -1,5 +1,5 @@
 {
-  "name": "claim-check",
+  "name": "@skryvo/claim-check",
   "version": "0.1.0",
   "mcpName": "ai.skryvo/claim-check",
   "description": "Finds the factual claims in a text, looks for a source for each, and reports which are supported, contradicted or unsourced. CLI, MCP server and GitHub Action; bring your own model.",
@@ -66,5 +66,8 @@
     "@types/node": "^20.19.0",
     "esbuild": "^0.28.2",
     "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

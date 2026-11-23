@@ -1,0 +1,8 @@
+{
+  "searchParameters": { "q": "harbour bridge opened", "type": "search", "engine": "google" },
+  "organic": [
+    { "title": "Harbour bridge history", "link": "https://history.example/harbour-bridge", "snippet": "Work began in 1924 and the bridge opened in 1932.", "position": 1 },
+    { "title": "Building the arch", "link": "https://engineering.example/arch", "snippet": "The two halves of the arch met in August 1930.", "position": 2 }
+  ],
+  "peopleAlsoAsk": [{ "question": "How long is the harbour bridge?" }]
+}

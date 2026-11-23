@@ -1,0 +1,64 @@
+name: claim-check
+description: Checks the factual claims in changed Markdown files against their sources and annotates contradicted and unsourced ones.
+author: Flutter Studio LLC
+branding:
+  icon: check-circle
+  color: green
+
+inputs:
+  base-url:
+    description: A chat completions endpoint, for example https://openrouter.ai/api/v1. There is no default.
+    required: true
+  model:
+    description: The model id at that endpoint. There is no default.
+    required: true
+  api-key:
+    description: The endpoint's key. Keep it in a secret.
+    required: false
+    default: ""
+  model-options:
+    description: Extra request fields as a JSON object, for example '{"max_tokens":4000}'.
+    required: false
+    default: ""
+  search:
+    description: cited (only the addresses each file cites), or brave, serper or tavily to search the web as well.
+    required: false
+    default: cited
+  search-key:
+    description: The search provider's key, when search is not cited. Keep it in a secret.
+    required: false
+    default: ""
+  files:
+    description: Globs of the files to check, comma- or newline-separated.
+    required: false
+    default: "**/*.md"
+  lines:
+    description: On a pull request, "changed" checks only claims on added or edited lines; "all" checks whole files.
+    required: false
+    default: changed
+  max-claims:
+    description: The most claims to check per file.
+    required: false
+    default: "20"
+  fail-on:
+    description: Fail the job when a claim is contradicted (default), unsourced (contradicted or no source found), or never.
+    required: false
+    default: contradicted
+  github-token:
+    description: Reads the pull request's changed files.
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  checked:
+    description: How many claims were checked.
+  contradicted:
+    description: How many claims a source contradicts.
+  unsourced:
+    description: How many claims no source was found for.
+  report:
+    description: Path of the full report as JSON.
+
+runs:
+  using: node24
+  main: action/index.js

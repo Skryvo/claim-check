@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.skryvo/claim-check",
+  "title": "claim-check",
+  "description": "Checks the factual claims in a text against sources and quotes the passage behind each verdict",
+  "version": "0.1.0",
+  "websiteUrl": "https://github.com/Skryvo/claim-check",
+  "repository": {
+    "url": "https://github.com/Skryvo/claim-check",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "claim-check",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "packageArguments": [{ "type": "positional", "value": "mcp" }],
+      "environmentVariables": [
+        { "name": "CLAIM_CHECK_BASE_URL", "description": "A chat completions endpoint, such as https://openrouter.ai/api/v1 or http://localhost:11434/v1", "isRequired": true },
+        { "name": "CLAIM_CHECK_MODEL", "description": "The model id at that endpoint", "isRequired": true },
+        { "name": "CLAIM_CHECK_API_KEY", "description": "The endpoint's key, if it needs one", "isRequired": false, "isSecret": true },
+        { "name": "CLAIM_CHECK_MODEL_OPTIONS", "description": "Extra request fields as a JSON object", "isRequired": false },
+        { "name": "CLAIM_CHECK_SEARCH", "description": "cited (default), brave, serper or tavily", "isRequired": false, "default": "cited" },
+        { "name": "BRAVE_SEARCH_API_KEY", "description": "Key for search brave", "isRequired": false, "isSecret": true },
+        { "name": "SERPER_API_KEY", "description": "Key for search serper", "isRequired": false, "isSecret": true },
+        { "name": "TAVILY_API_KEY", "description": "Key for search tavily", "isRequired": false, "isSecret": true }
+      ]
+    }
+  ]
+}

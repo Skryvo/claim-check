@@ -1,0 +1,14 @@
+{
+  "query": "harbour bridge opened",
+  "results": [
+    {
+      "title": "The harbour bridge | City archive",
+      "url": "https://archive.example/harbour-bridge",
+      "content": "Harbour bridge, a steel arch bridge opened in 1932 that carries rail, road and foot traffic.",
+      "score": 0.81,
+      "raw_content": null
+    }
+  ],
+  "response_time": "1.67",
+  "request_id": "123e4567-e89b-12d3-a456-426614174111"
+}

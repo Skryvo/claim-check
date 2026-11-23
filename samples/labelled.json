@@ -1,0 +1,267 @@
+{
+  "about": "Claims with the verdict a careful reader reaches from the given pages alone (read 23 Nov 2026). Run: npm run eval.",
+  "claims": [
+    {
+      "id": "s1",
+      "claim": "Tim Berners-Lee wrote his proposal for the World Wide Web in March 1989.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tim_Berners-Lee"
+      ],
+      "expected": "supported",
+      "reason": "The page says he wrote his proposal in March 1989."
+    },
+    {
+      "id": "s2",
+      "claim": "The Eiffel Tower was built from 1887 to 1889.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Eiffel_Tower"
+      ],
+      "expected": "supported",
+      "reason": "The page's opening says the company built the tower from 1887 to 1889."
+    },
+    {
+      "id": "s3",
+      "claim": "Mount Everest's height was measured in 2020 as 8,848.86 metres.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mount_Everest"
+      ],
+      "expected": "supported",
+      "reason": "The page gives the 2020 joint survey's 8,848.86 m."
+    },
+    {
+      "id": "s4",
+      "claim": "Guido van Rossum first released Python in 1991.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Python_(programming_language)"
+      ],
+      "expected": "supported",
+      "reason": "The page says van Rossum first released it in 1991 as Python 0.9.0."
+    },
+    {
+      "id": "s5",
+      "claim": "Marie Curie was the first woman to win a Nobel Prize.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Marie_Curie"
+      ],
+      "expected": "supported",
+      "reason": "The page states she was the first woman to win a Nobel Prize."
+    },
+    {
+      "id": "s6",
+      "claim": "The Amazon River flows into the Atlantic Ocean.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Amazon_River"
+      ],
+      "expected": "supported",
+      "reason": "The page gives the river's mouth as the Atlantic Ocean."
+    },
+    {
+      "id": "s7",
+      "claim": "Neil Armstrong was the first person to walk on the Moon.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Neil_Armstrong"
+      ],
+      "expected": "supported",
+      "reason": "The page's opening says he became the first person to walk on the Moon."
+    },
+    {
+      "id": "s8",
+      "claim": "When he stepped onto the Moon, Neil Armstrong said: \"That's one small step for [a] man, one giant leap for mankind.\"",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Neil_Armstrong"
+      ],
+      "expected": "supported",
+      "reason": "The page quotes the line."
+    },
+    {
+      "id": "s9",
+      "claim": "The UN General Assembly adopted the Universal Declaration of Human Rights in Paris on 10 December 1948.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Universal_Declaration_of_Human_Rights"
+      ],
+      "expected": "supported",
+      "reason": "The page gives the adoption in Paris on 10 December 1948."
+    },
+    {
+      "id": "s10",
+      "claim": "Linux was first released on 17 September 1991 by Linus Torvalds.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Linux"
+      ],
+      "expected": "supported",
+      "reason": "The page's opening gives that date and name."
+    },
+    {
+      "id": "s11",
+      "claim": "Canberra is the capital city of Australia.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Canberra"
+      ],
+      "expected": "supported",
+      "reason": "The page's opening says so."
+    },
+    {
+      "id": "s12",
+      "claim": "The Pacific Ocean covers about 46% of Earth's water surface.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pacific_Ocean"
+      ],
+      "expected": "supported",
+      "reason": "The page says it covers approximately 46% of Earth's water surface."
+    },
+    {
+      "id": "x1",
+      "claim": "The Eiffel Tower was built from 1897 to 1899.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Eiffel_Tower"
+      ],
+      "expected": "contradicted",
+      "reason": "The page gives 1887 to 1889."
+    },
+    {
+      "id": "x2",
+      "claim": "Mount Everest's height was measured in 2020 as 8,948.86 metres.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mount_Everest"
+      ],
+      "expected": "contradicted",
+      "reason": "The 2020 survey gave 8,848.86 m."
+    },
+    {
+      "id": "x3",
+      "claim": "Guido van Rossum first released Python in 2001.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Python_(programming_language)"
+      ],
+      "expected": "contradicted",
+      "reason": "The page gives 1991."
+    },
+    {
+      "id": "x4",
+      "claim": "Canberra is the largest city in Australia.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Canberra"
+      ],
+      "expected": "contradicted",
+      "reason": "The page calls it the largest inland city and the eighth-largest by population."
+    },
+    {
+      "id": "x5",
+      "claim": "On 9 November 1991 the East German government announced that its citizens could visit West Berlin.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Berlin_Wall"
+      ],
+      "expected": "contradicted",
+      "reason": "The page gives 9 November 1989."
+    },
+    {
+      "id": "x6",
+      "claim": "Marie Curie won a Nobel Prize only once.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Marie_Curie"
+      ],
+      "expected": "contradicted",
+      "reason": "The page says she was the first person to win a Nobel Prize twice."
+    },
+    {
+      "id": "x7",
+      "claim": "The Amazon River flows into the Pacific Ocean.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Amazon_River"
+      ],
+      "expected": "contradicted",
+      "reason": "The page gives the mouth as the Atlantic Ocean."
+    },
+    {
+      "id": "x8",
+      "claim": "The Great Barrier Reef lies off the coast of Western Australia.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Great_Barrier_Reef"
+      ],
+      "expected": "contradicted",
+      "reason": "The page says it lies off the coast of Queensland."
+    },
+    {
+      "id": "n1",
+      "claim": "About 70% of travellers say a famous landmark is the main reason they choose a city.",
+      "sources": [],
+      "expected": "no_source_found",
+      "reason": "No address is given and none is searched for."
+    },
+    {
+      "id": "n2",
+      "claim": "Remote workers are 13% more productive than office workers.",
+      "sources": [],
+      "expected": "no_source_found",
+      "reason": "No address is given and none is searched for."
+    },
+    {
+      "id": "n3",
+      "claim": "The average office worker receives 121 emails a day.",
+      "sources": [],
+      "expected": "no_source_found",
+      "reason": "No address is given and none is searched for."
+    },
+    {
+      "id": "n4",
+      "claim": "Canberra hosted the 2000 Summer Olympics.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Berlin_Wall"
+      ],
+      "expected": "no_source_found",
+      "reason": "The address given is about another subject."
+    },
+    {
+      "id": "n5",
+      "claim": "Linus Torvalds was born in Helsinki.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Eiffel_Tower"
+      ],
+      "expected": "no_source_found",
+      "reason": "The address given is about another subject."
+    },
+    {
+      "id": "n6",
+      "claim": "The Eiffel Tower receives about 7 million visitors a year.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pacific_Ocean"
+      ],
+      "expected": "no_source_found",
+      "reason": "The address given is about another subject."
+    },
+    {
+      "id": "u1",
+      "claim": "Python is the most enjoyable programming language to learn.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Python_(programming_language)"
+      ],
+      "expected": "not_checkable",
+      "reason": "An opinion."
+    },
+    {
+      "id": "u2",
+      "claim": "Our team will double its output next year.",
+      "sources": [],
+      "expected": "not_checkable",
+      "reason": "A prediction about a private team."
+    },
+    {
+      "id": "u3",
+      "claim": "You should visit Canberra in spring.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Canberra"
+      ],
+      "expected": "not_checkable",
+      "reason": "Advice."
+    },
+    {
+      "id": "u4",
+      "claim": "I think the fall of the Berlin Wall was the best moment of the century.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Berlin_Wall"
+      ],
+      "expected": "not_checkable",
+      "reason": "The author's opinion."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "claim-check",
+  "version": "0.1.0",
+  "mcpName": "ai.skryvo/claim-check",
+  "description": "Finds the factual claims in a text, looks for a source for each, and reports which are supported, contradicted or unsourced. CLI, MCP server and GitHub Action; bring your own model.",
+  "keywords": [
+    "fact-check",
+    "fact-checking",
+    "claims",
+    "citations",
+    "sources",
+    "markdown",
+    "mcp",
+    "github-action",
+    "cli",
+    "llm"
+  ],
+  "homepage": "https://github.com/Skryvo/claim-check#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skryvo/claim-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Skryvo/claim-check/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "Flutter Studio LLC <support@skryvo.ai>",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "claim-check": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "!dist/action",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "build:action": "esbuild src/action/main.ts --bundle --platform=node --target=node24 --format=esm --legal-comments=none --outfile=action/index.js",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "eval": "npm run build && node scripts/eval.mjs",
+    "prepublishOnly": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.4.0",
+    "@types/node": "^20.19.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3"
+  }
+}

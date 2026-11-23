@@ -1,0 +1,110 @@
+{
+  "input": "examples/sample.md",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "search": "cited",
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The ocean covers about 71 percent of the Earth (NOAA)",
+      "statement": "The ocean covers about 71 percent of the Earth.",
+      "kind": "statistic",
+      "line": 3,
+      "verdict": "supported",
+      "why": "The source states the ocean covers 71 percent of the Earth, matching the claim.",
+      "source": {
+        "url": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+        "title": "How many oceans are there?",
+        "passage": "While there is only one global ocean, the vast body of water that covers 71 percent of the Earth is geographically divided into distinct named regions. The boundaries between these regions have evolved over time for a variety of historical, cultural, geographical, and scientific reasons.",
+        "quote": "the vast body of water that covers 71 percent of the Earth"
+      },
+      "consulted": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+          "via": "cited",
+          "read": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Statue of Liberty was dedicated in 1896 (National Park Service)",
+      "statement": "The Statue of Liberty was dedicated in 1896.",
+      "kind": "date",
+      "line": 5,
+      "verdict": "contradicted",
+      "why": "The source states the statue was dedicated in 1886, not 1896.",
+      "source": {
+        "url": "https://www.nps.gov/stli/index.htm",
+        "title": "Statue Of Liberty National Monument (U.S. National Park Service)",
+        "passage": "A gift of friendship from the people of France to the United States \"Liberty Enlightening the World\" is recognized as a universal symbol of freedom and democracy. It was dedicated by President Grover Cleveland on October 28, 1886. Designated as a National Monument in 1924, employees of the National Park Service have been caring for the Statue of Liberty since 1933.",
+        "quote": "It was dedicated by President Grover Cleveland on October 28, 1886."
+      },
+      "consulted": [
+        {
+          "url": "https://www.nps.gov/stli/index.htm",
+          "via": "cited",
+          "read": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "The Pacific is the largest ocean on Earth",
+      "statement": "The Pacific is the largest ocean on Earth.",
+      "kind": "superlative",
+      "line": 7,
+      "verdict": "supported",
+      "why": "The source states the Pacific is by far the largest of the world's ocean basins, which matches the claim that it is the largest ocean on Earth.",
+      "source": {
+        "url": "https://oceanservice.noaa.gov/facts/pacific.html",
+        "title": "How did the Pacific Ocean get its name?",
+        "passage": "Covering approximately 155 million square kilometers (59 million square miles) and containing more than half of the free water on Earth, the Pacific is by far the largest of the world's ocean basins. All of the world's continents could fit into the Pacific basin!",
+        "quote": "the Pacific is by far the largest of the world's ocean basins"
+      },
+      "consulted": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/pacific.html",
+          "via": "cited",
+          "read": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "About 70% of travellers say a famous landmark is the main reason they choose a city",
+      "statement": "About 70% of travellers say a famous landmark is the main reason they choose a city.",
+      "kind": "statistic",
+      "line": 9,
+      "verdict": "no_source_found",
+      "why": "The text cites no address for it, and no web search is set.",
+      "source": null,
+      "consulted": []
+    },
+    {
+      "id": "c5",
+      "text": "New York is the most beautiful city to visit in spring",
+      "statement": "New York is the most beautiful city to visit in spring.",
+      "kind": "superlative",
+      "line": 11,
+      "verdict": "not_checkable",
+      "why": "opinion",
+      "source": null,
+      "consulted": []
+    }
+  ],
+  "counts": {
+    "supported": 2,
+    "contradicted": 1,
+    "no_source_found": 1,
+    "not_checkable": 1
+  },
+  "usage": {
+    "calls": 4,
+    "promptTokens": 2526,
+    "completionTokens": 461,
+    "cost": 0.000495343
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "search",
+  "query": { "original": "When did the harbour bridge open?", "more_results_available": true },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Harbour bridge history",
+        "url": "https://history.example/harbour-bridge",
+        "description": "The harbour bridge opened to traffic in the spring of 1932 after eight years of work.",
+        "extra_snippets": ["Its arch spans 503 metres."]
+      },
+      { "title": "No address", "description": "An entry without a url." },
+      { "title": "Visiting the bridge", "url": "https://visit.example/bridge", "description": "Opening hours and tickets." }
+    ]
+  }
+}

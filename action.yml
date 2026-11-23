@@ -1,4 +1,4 @@
-name: claim-check
+name: Skryvo claim check
 description: Checks the factual claims in changed Markdown files against their sources and annotates contradicted and unsourced ones.
 author: Flutter Studio LLC
 branding:

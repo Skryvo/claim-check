@@ -1,6 +1,6 @@
 {
   "name": "@skryvo/claim-check",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "mcpName": "ai.skryvo/claim-check",
   "description": "Finds the factual claims in a text, looks for a source for each, and reports which are supported, contradicted or unsourced. CLI, MCP server and GitHub Action; bring your own model.",
   "keywords": [

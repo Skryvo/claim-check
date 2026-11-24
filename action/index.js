@@ -3,7 +3,7 @@ import { appendFile, readFile, writeFile } from "node:fs/promises";
 import path2 from "node:path";
 
 // src/version.ts
-var VERSION = "0.1.0";
+var VERSION = "0.1.1";
 var USER_AGENT = `claim-check/${VERSION} (+https://github.com/Skryvo/claim-check)`;
 
 // src/model.ts
